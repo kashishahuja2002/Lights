@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(43, 41, 41);
+}
+
+#wire{
+    width: 100%;
+    height: 150px;
+    border: 2px solid black;
+}
+
+#wire li{
+    position: relative;
+    list-style: none;
+    width: 14px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    margin: 0px 15px;
+    padding: 0px;
+    top: 135px;
+    animation: glow-even .8s infinite linear both;
+}
+#wire li:nth-child(odd){
+    animation: glow-odd .8s infinite linear both;
+}
+
+@keyframes glow-even{
+    0%, 100%{
+        background: rgb(255, 65,185,1);
+        box-shadow: 0px 2px 20px 4px rgb(255, 65,185,1); 
+    }
+    50%{
+        background: rgba(255, 65,185,0.5);
+        box-shadow: 0px 2px 20px 4px rgba(255, 65,185,0.3);
+    }
+}
+
+@keyframes glow-odd{
+    50%{
+        background: rgba(255, 230, 65,1);
+        box-shadow: 0px 2px 20px 4px rgb(255, 230, 65,1);
+    }
+    0%,100%{
+        background: rgba(255, 230, 65,0.5);
+        box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 0.3);
+    }
+}
+
+.wish{
+    color: #fff;
+    position: relative;
+    top: 50px;
+    left: 250px;
+    text-shadow: 0px 0px 15px rgba(255, 65,185,1);
+}
